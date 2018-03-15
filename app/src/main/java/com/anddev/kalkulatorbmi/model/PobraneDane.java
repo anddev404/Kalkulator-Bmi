@@ -21,7 +21,7 @@ public class PobraneDane {
     @Setter
     private float waga;
 
-    public PobraneDane(int wiek, int wzrost, float waga) {
+    public PobraneDane(int wiek, float wzrost, float waga) {
         this.wiek = wiek;
         this.wzrost = wzrost;
         this.waga = waga;
