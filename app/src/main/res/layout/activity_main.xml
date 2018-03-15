@@ -4,15 +4,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.anddev.kalkulatorbmi.MainActivity">
+    android:background="@color/colorBackgroundMainActivity"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="com.anddev.kalkulatorbmi.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/wprowadzanieDanychLineraLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center_horizontal">
 
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tabela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:padding="5dip">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_column="0"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/age" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/editText"
+                    android:layout_column="1"
+                    android:autoSizeTextType="uniform"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="3"
+
+                    />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+
+                    android:text="K" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+
+                    android:text="M" />
+
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_column="0"
+
+                    android:text="@string/height" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/editText2"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+
+                    android:maxLength="5" />
+            </TableRow>
+
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_column="0"
+
+                    android:text="@string/weight" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/editText3"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5" />
+            </TableRow>
+        </TableLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintLeft_toLeftOf="@id/wprowadzanieDanychLineraLayout"
+        app:layout_constraintRight_toRightOf="@id/wprowadzanieDanychLineraLayout"
+        app:layout_constraintTop_toBottomOf="@id/wprowadzanieDanychLineraLayout">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="BMI = 30"
+            android:textSize="30dp" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
