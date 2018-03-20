@@ -54,13 +54,12 @@ public class MainActivity extends AppCompatActivity {
             PobraneDane pobraneDane = pobierzDaneZWidokuDoModelu();
             Kalkulator kalkulator = new Kalkulator(pobraneDane);
             float bmi = kalkulator.obliczBmi();
-            Toast.makeText(MainActivity.this, "Bmi wynosi: " + bmi, Toast.LENGTH_SHORT).show();
-
+            wyswietlBmiWWidoku(bmi);
         }
     };
 
     public PobraneDane pobierzDaneZWidokuDoModelu() {
-        
+
         try {
 
             Integer wiek = Integer.parseInt(wiekEditText.getText().toString());
@@ -74,5 +73,9 @@ public class MainActivity extends AppCompatActivity {
             return new PobraneDane(0, 0, 0);
 
         }
+    }
+
+    public void wyswietlBmiWWidoku(Float bmi) {
+        bmiTextView.setText("" + bmi);
     }
 }
