@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="kolorNiedowaga">#3892e1</color>
+    <color name="kolorWagaWlasciwa">#19c73c</color>
+    <color name="kolorNadwaga">#e4d33a</color>
+    <color name="kolorOtylosc1">#f4b13d</color>
+    <color name="kolorOtylosc2">#ed453c</color>
+
+    <color name="kolorWskaznik">#464141</color>
+
+    <color name="tlo">#fafafa</color>
+
+
 </resources>

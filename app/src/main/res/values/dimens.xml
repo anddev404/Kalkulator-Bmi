@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="wysokoscWskaznika">30dp</dimen>
+    <dimen name="szerokoscWskaznika">5dp</dimen>
+
+    <dimen name="wysokoscPolaWskaznika">20dp</dimen>
+    <dimen name="marginesPolaWskaznika">20dp</dimen>
+
+</resources>

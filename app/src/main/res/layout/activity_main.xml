@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/tlo"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context="com.anddev.kalkulatorbmi.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
-    <RelativeLayout
+
+    <android.support.v7.widget.CardView
         android:id="@+id/wprowadzanieDanychLineraLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
 
 
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -104,31 +107,83 @@
                     android:maxLength="5" />
             </TableRow>
         </TableLayout>
+    </android.support.v7.widget.CardView>
 
 
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="2"
-        app:layout_constraintLeft_toLeftOf="@id/wprowadzanieDanychLineraLayout"
-        app:layout_constraintRight_toRightOf="@id/wprowadzanieDanychLineraLayout"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintTop_toBottomOf="@id/wprowadzanieDanychLineraLayout">
 
-        <TextView
-            android:id="@+id/bmiTextView"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="BMI = 30"
-            android:textSize="30dp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/bmiTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="BMI = 30"
+                android:textSize="30dp" />
 
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/marginesPolaWskaznika"
+                android:paddingRight="@dimen/marginesPolaWskaznika">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wysokoscPolaWskaznika"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/kolorNiedowaga" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/kolorWagaWlasciwa" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/kolorNadwaga" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/kolorOtylosc1" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/kolorOtylosc2" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wysokoscWskaznika"
+                    android:layout_centerInParent="true"
+                    android:progress="30"
+                    android:progressDrawable="@null"
+                    android:thumb="@drawable/wskaznik"
+                    android:thumbOffset="20dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

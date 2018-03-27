@@ -9,9 +9,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anddev.kalkulatorbmi.model.PobraneDane;
+import com.anddev.kalkulatorbmi.tools.FloatUtils;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OptionsMenuItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     private final TextWatcher textWatcher = new TextWatcher() {
 
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -54,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
             PobraneDane pobraneDane = pobierzDaneZWidokuDoModelu();
             Kalkulator kalkulator = new Kalkulator(pobraneDane);
             float bmi = kalkulator.obliczBmi();
+            bmi = FloatUtils.zaokraglijFloata(bmi, 2);
             wyswietlBmiWWidoku(bmi);
+
         }
     };
 
