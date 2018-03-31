@@ -6,6 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/kolorTekstu</item>
+        <item name="android:editTextColor">@color/kolorNiedowaga</item>
+        <item name="android:editTextStyle">@color/kolorOtylosc2</item>
+
     </style>
 
 

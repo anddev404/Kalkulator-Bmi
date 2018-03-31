@@ -7,12 +7,15 @@
     <color name="kolorNiedowaga">#3892e1</color>
     <color name="kolorWagaWlasciwa">#19c73c</color>
     <color name="kolorNadwaga">#e4d33a</color>
+    <color name="kolorNadwagaSlaby">#e9e08f</color>
     <color name="kolorOtylosc1">#f4b13d</color>
     <color name="kolorOtylosc2">#ed453c</color>
 
     <color name="kolorWskaznik">#464141</color>
 
-    <color name="tlo">#fafafa</color>
+    <color name="tlo">#ecebeb</color>
+
+    <color name="kolorTekstu">#000000</color>
 
 
 </resources>

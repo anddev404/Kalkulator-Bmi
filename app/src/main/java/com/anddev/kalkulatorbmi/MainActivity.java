@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         wiekEditText.addTextChangedListener(textWatcher);
         wzrostEditText.addTextChangedListener(textWatcher);
         wagaEditText.addTextChangedListener(textWatcher);
+        getSupportActionBar().hide();
 
     }
 
@@ -83,4 +84,7 @@ public class MainActivity extends AppCompatActivity {
     public void wyswietlBmiWWidoku(Float bmi) {
         bmiTextView.setText("" + bmi);
     }
+
+
 }
+
