@@ -41,6 +41,75 @@ public class Kalkulator {
 
     }
 
+    public Float obliczWageIdealna() {
+
+        try {
+
+            float wzrostWMetrach = zamienCmNaMetry(pobraneDane.getWzrost());
+            float kwadratWzrostu = getKwadratWzrostu(wzrostWMetrach);
+
+            if (kwadratWzrostu != 0) {
+
+                return 21.75f * kwadratWzrostu;
+
+            } else {
+                return 0f;
+            }
+
+        } catch (Exception e) {
+
+            return 0f;
+        }
+
+
+    }
+
+    public Float obliczWageMinimalna() {
+
+        try {
+
+            float wzrostWMetrach = zamienCmNaMetry(pobraneDane.getWzrost());
+            float kwadratWzrostu = getKwadratWzrostu(wzrostWMetrach);
+
+            if (kwadratWzrostu != 0) {
+
+                return 18.5f * kwadratWzrostu;
+
+            } else {
+                return 0f;
+            }
+
+        } catch (Exception e) {
+
+            return 0f;
+        }
+
+
+    }
+
+    public Float obliczWageMaksymalna() {
+
+        try {
+
+            float wzrostWMetrach = zamienCmNaMetry(pobraneDane.getWzrost());
+            float kwadratWzrostu = getKwadratWzrostu(wzrostWMetrach);
+
+            if (kwadratWzrostu != 0) {
+
+                return 25f * kwadratWzrostu;
+
+            } else {
+                return 0f;
+            }
+
+        } catch (Exception e) {
+
+            return 0f;
+        }
+
+
+    }
+
     private float zamienCmNaMetry(float cm) {
 
         return cm / 100;
