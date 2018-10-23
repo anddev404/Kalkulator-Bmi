@@ -7,7 +7,7 @@ package com.anddev.kalkulatorbmi.tools;
 public class FloatUtils {
 
     public static float zaokraglijFloata(Float liczba, int ileLiczbPoPrzecinku) {
-
+//ssssssssssssssss
         try {//s
             liczba.intValue();
             Double mnoznik = Math.pow(10d, ileLiczbPoPrzecinku);
