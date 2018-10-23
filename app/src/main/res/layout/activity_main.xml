@@ -233,7 +233,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/wysokoscWskaznika"
                         android:layout_centerInParent="true"
-                        android:progress="30"
                         android:progressDrawable="@null"
                         android:thumb="@drawable/wskaznik"
                         android:thumbOffset="20dp" />
@@ -312,7 +311,6 @@
                         android:id="@+id/linearLayoutNadwaga"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/kolorNadwagaSlaby"
                         android:orientation="horizontal"
                         android:paddingBottom="8dp"
                         android:paddingLeft="@dimen/marginesPolaWskaznika"

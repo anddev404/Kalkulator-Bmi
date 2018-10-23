@@ -8,7 +8,7 @@ public class FloatUtils {
 
     public static float zaokraglijFloata(Float liczba, int ileLiczbPoPrzecinku) {
 
-        try {
+        try {//s
             liczba.intValue();
             Double mnoznik = Math.pow(10d, ileLiczbPoPrzecinku);
             Float l = liczba * mnoznik.floatValue();
