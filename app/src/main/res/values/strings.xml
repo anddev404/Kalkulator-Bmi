@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">Calculator BMI</string>
+
     <string name="age">AGE</string>
     <string name="height">HEIGHT</string>
     <string name="weight">WEIGHT</string>
+
+    <string name="underweight">Underweight</string>
+    <string name="normal_weight">Normal Weight</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese1">1 Degree Obesity</string>
+    <string name="obese2">2 Degree Obesity</string>
+
+    <string name="ideal_weight">Ideal Weight</string>
+    <string name="correct_weight">Correct Weight</string>
+    <string name="under_over_weight">Underweight/Overweight</string>
 </resources>

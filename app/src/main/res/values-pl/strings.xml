@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">Kalkulator BMI</string>
+
     <string name="age">WIEK</string>
     <string name="height">WZROST</string>
     <string name="weight">WAGA</string>
+
+    <string name="underweight">Niedowaga</string>
+    <string name="normal_weight">Waga Normalna</string>
+    <string name="overweight">Nadwaga</string>
+    <string name="obese1">Otyłośc I Stopnia</string>
+    <string name="obese2">Otyłośc II Stopnia</string>
+    
+    <string name="ideal_weight">Waga Idealna</string>
+    <string name="correct_weight">Waga Prawidłowa</string>
+    <string name="under_over_weight">Niedowaga/Nadwaga</string>
 </resources>
