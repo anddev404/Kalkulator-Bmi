@@ -3,6 +3,7 @@ package com.anddev.kalkulatorbmi;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.nadwaga)
     TextView nadwaga;
 
+    @BindView(R.id.underOverWeightTextView)
+    TextView nadwagaTextView;
 
     @BindView(R.id.seekBarBmi)
     SeekBar seekBarBmi;
@@ -81,6 +84,13 @@ public class MainActivity extends AppCompatActivity {
         wagaEditText.addTextChangedListener(textWatcher);
         getSupportActionBar().hide();
 
+        seekBarBmi.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                return true;
+            }
+        });
     }
 
 
@@ -263,8 +273,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void wyswietlaNadwage(float nadwagaFloat) {
+        Float niedowagaNadwaga = FloatUtils.zaokraglijFloata(nadwagaFloat, 1);
 
-        nadwaga.setText("" + FloatUtils.zaokraglijFloata(nadwagaFloat, 1));
+        if (niedowagaNadwaga < 0) {
+            nadwagaTextView.setText(getResources().getString(R.string.underweight));
+            nadwaga.setText("" + (-niedowagaNadwaga));
+        } else {
+            nadwagaTextView.setText(getResources().getString(R.string.overweight));
+            nadwaga.setText("" + niedowagaNadwaga);
+        }
     }
 
 }
