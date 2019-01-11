@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/tlo"
     android:fillViewport="true"
     android:paddingBottom="10dp"
@@ -13,439 +13,496 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="2">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/wprowadzanieDanychCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:weightSum="19">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7"
+                            android:orientation="vertical"
+                            android:paddingRight="10dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:layout_weight="4"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/age"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/height"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/weight"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wiekEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:ems="10"
+                                android:imeOptions="flagNoExtractUi"
+                                android:inputType="number"
+                                android:maxLength="3" />
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wzrostEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:ems="10"
+                                android:imeOptions="flagNoExtractUi"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5" />
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wagaEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:ems="10"
+                                android:imeOptions="flagNoExtractUi"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/buttonKobieta"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/kobieta_aktywny" />
+
+                            <ImageButton
+                                android:id="@+id/buttonMezczyzna"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/mezczyzna" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/wprowadzanieDanychCardView">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/marginesPolaWskaznika"
+                        android:paddingRight="@dimen/marginesPolaWskaznika">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/ideal_weight" />
+
+                            <TextView
+                                android:id="@+id/wagaIdealna"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="... kg" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingBottom="15dp">
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/correct_weight" />
+
+                            <TextView
+                                android:id="@+id/przedzialWagi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="... - ... kg" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingBottom="15dp">
+
+                            <TextView
+                                android:id="@+id/underOverWeightTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/under_over_weight" />
+
+                            <TextView
+                                android:id="@+id/nadwaga"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="... kg" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
 
             <android.support.v7.widget.CardView
-                android:id="@+id/wprowadzanieDanychCardView"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/wynikCardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                app:cardCornerRadius="10dp">
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintLeft_toRightOf="@id/wprowadzanieDanychCardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:weightSum="10">
+                        android:paddingTop="5dp"
+                        android:weightSum="2">
 
                         <TextView
-                            android:id="@+id/textView"
+                            android:id="@+id/textView10"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:gravity="center"
-                            android:text="@string/age" />
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="BMI  "
+                            android:textSize="30dp" />
 
-                        <EditText
-                            android:id="@+id/wiekEditText"
+                        <TextView
+                            android:id="@+id/bmiTextView"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:ems="10"
-                            android:inputType="number"
-                            android:maxLength="3" />
-
-                        <Button
-                            android:id="@+id/button"
-                            android:layout_width="0dp"
-                            android:layout_height="50dp"
                             android:layout_weight="1"
-
-                            android:background="@drawable/kobieta_aktywny" />
-
-                        <Button
-                            android:id="@+id/button2"
-                            android:layout_width="0dp"
-                            android:layout_height="50dp"
-                            android:layout_weight="1"
-
-                            android:background="@drawable/mezczyzna" />
+                            android:gravity="left"
+                            android:text="..."
+                            android:textSize="30dp" />
                     </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="@dimen/marginesPolaWskaznika"
+                        android:paddingRight="@dimen/marginesPolaWskaznika">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/wysokoscPolaWskaznika"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/kolorNiedowaga" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/kolorWagaWlasciwa" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/kolorNadwaga" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/kolorOtylosc1" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/kolorOtylosc2" />
+
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/seekBarBmi"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/wysokoscWskaznika"
+                            android:layout_centerInParent="true"
+                            android:progressDrawable="@null"
+                            android:thumb="@drawable/wskaznik"
+                            android:thumbOffset="20dp" />
+                    </RelativeLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="10">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="0dp"
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutNiedowaga"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:gravity="center"
-                            android:text="@string/height" />
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="@dimen/marginesPolaWskaznika"
+                            android:paddingRight="@dimen/marginesPolaWskaznika"
+                            android:paddingTop="8dp"
+                            android:weightSum="10">
 
-                        <EditText
-                            android:id="@+id/wzrostEditText"
-                            android:layout_width="0dp"
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/kwadrat_niedowaga" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="7"
+                                android:text="@string/underweight" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:text="&lt;18.5" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutWagaPrawidlowa"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:ems="10"
-                            android:inputType="numberDecimal"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="@dimen/marginesPolaWskaznika"
+                            android:paddingRight="@dimen/marginesPolaWskaznika"
+                            android:paddingTop="8dp"
+                            android:weightSum="10">
 
-                            android:maxLength="5" />
-                    </LinearLayout>
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/kwadrat_waga_prawidlowa" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="10">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="7"
+                                android:text="@string/normal_weight" />
 
-                        <TextView
-                            android:id="@+id/textView3"
-                            android:layout_width="0dp"
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:text="18.5 - 25" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutNadwaga"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:gravity="center"
-                            android:text="@string/weight" />
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="@dimen/marginesPolaWskaznika"
+                            android:paddingRight="@dimen/marginesPolaWskaznika"
+                            android:paddingTop="8dp"
+                            android:weightSum="10">
 
-                        <EditText
-                            android:id="@+id/wagaEditText"
-                            android:layout_width="0dp"
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/kwadrat_nadwaga" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="7"
+                                android:text="@string/overweight" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:text="25 - 30" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutOtylosc1"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:ems="10"
-                            android:inputType="numberDecimal"
-                            android:maxLength="5" />
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="@dimen/marginesPolaWskaznika"
+                            android:paddingRight="@dimen/marginesPolaWskaznika"
+                            android:paddingTop="8dp"
+                            android:weightSum="10">
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/kwadrat_otylosc1" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="7"
+                                android:text="@string/obese1" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:text="30 - 40" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutOtylosc2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="@dimen/marginesPolaWskaznika"
+                            android:paddingRight="@dimen/marginesPolaWskaznika"
+                            android:paddingTop="8dp"
+                            android:weightSum="10">
+
+                            <View
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/kwadrat_otylosc2" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="7"
+                                android:text="@string/obese2" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:text="&gt;40" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:cardCornerRadius="10dp"
-                app:layout_constraintTop_toBottomOf="@id/wprowadzanieDanychCardView">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingLeft="@dimen/marginesPolaWskaznika"
-                    android:paddingRight="@dimen/marginesPolaWskaznika">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingBottom="15dp"
-                        android:paddingTop="10dp">
-
-                        <TextView
-                            android:id="@+id/textView9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Waga Idealna" />
-
-                        <TextView
-                            android:id="@+id/textView4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:text="89 kg" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingBottom="15dp">
-
-                        <TextView
-                            android:id="@+id/textView8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Waga Prawidłowa" />
-
-                        <TextView
-                            android:id="@+id/textView5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:text="74.6 - 97.5 kg" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingBottom="15dp">
-
-                        <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Nadwaga/Niedowaga" />
-
-                        <TextView
-                            android:id="@+id/textView7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:text="26 kg" />
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
         </LinearLayout>
 
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/wynikCardView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="10dp"
-            app:layout_constraintLeft_toRightOf="@id/wprowadzanieDanychCardView">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/bmiTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="BMI = 30"
-                    android:textSize="30dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:paddingLeft="@dimen/marginesPolaWskaznika"
-                    android:paddingRight="@dimen/marginesPolaWskaznika">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/wysokoscPolaWskaznika"
-                        android:layout_centerInParent="true"
-                        android:orientation="horizontal">
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@color/kolorNiedowaga" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@color/kolorWagaWlasciwa" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@color/kolorNadwaga" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@color/kolorOtylosc1" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@color/kolorOtylosc2" />
-
-                    </LinearLayout>
-
-                    <SeekBar
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/wysokoscWskaznika"
-                        android:layout_centerInParent="true"
-                        android:progress="30"
-                        android:progressDrawable="@null"
-                        android:thumb="@drawable/wskaznik"
-                        android:thumbOffset="20dp" />
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:paddingLeft="@dimen/marginesPolaWskaznika"
-                    android:paddingRight="@dimen/marginesPolaWskaznika">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingTop="8dp"
-                        android:weightSum="10">
-
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:background="@drawable/kwadrat_niedowaga" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_weight="7"
-                            android:text="Niedowaga" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="18.5" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingTop="8dp"
-                        android:weightSum="10">
-
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:background="@drawable/kwadrat_waga_prawidlowa" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_weight="7"
-                            android:text="Waga Prawidłowa" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="18.5 - 25" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/kolorNadwagaSlaby"
-                        android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingTop="8dp"
-                        android:weightSum="10">
-
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:background="@drawable/kwadrat_nadwaga" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_weight="7"
-                            android:text="Nadwaga" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="25 - 30" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingTop="8dp"
-                        android:weightSum="10">
-
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:background="@drawable/kwadrat_otylosc1" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_weight="7"
-                            android:text="Otyłość 1" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="30 - 40" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingTop="8dp"
-                        android:weightSum="10">
-
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:background="@drawable/kwadrat_otylosc2" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
-                            android:layout_weight="7"
-                            android:text="Otyłość 2" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="40" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
     </LinearLayout>
-
-
 </ScrollView>

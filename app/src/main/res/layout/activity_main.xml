@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="10dp"
-                android:weightSum="20">
+                android:weightSum="19">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -83,28 +83,27 @@
                     android:layout_weight="5"
                     android:orientation="vertical">
 
-                    <EditText
+                    <android.support.v7.widget.AppCompatEditText
                         android:id="@+id/wiekEditText"
-                        android:layout_width="match_parent"
+                        style="@style/EditText"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:ems="10"
                         android:inputType="number"
                         android:maxLength="3" />
 
-                    <EditText
+                    <android.support.v7.widget.AppCompatEditText
                         android:id="@+id/wzrostEditText"
-                        android:layout_width="match_parent"
+                        style="@style/EditText"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:ems="10"
                         android:inputType="numberDecimal"
-
                         android:maxLength="5" />
 
-                    <EditText
+                    <android.support.v7.widget.AppCompatEditText
                         android:id="@+id/wagaEditText"
-                        android:layout_width="match_parent"
+                        style="@style/EditText"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:ems="10"
@@ -115,13 +114,13 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="7"
                     android:orientation="horizontal">
 
                     <ImageButton
                         android:id="@+id/buttonKobieta"
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@null"
                         android:scaleType="fitCenter"
@@ -130,7 +129,7 @@
                     <ImageButton
                         android:id="@+id/buttonMezczyzna"
                         android:layout_width="0dp"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@null"
                         android:scaleType="fitCenter"
@@ -266,14 +265,14 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="20dp"
                             android:layout_weight="7"
-                            android:text="Niedowaga" />
+                            android:text="@string/underweight" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
                             android:gravity="right"
-                            android:text="18.5" />
+                            android:text="&lt;18.5" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -297,7 +296,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="20dp"
                             android:layout_weight="7"
-                            android:text="Waga Prawidłowa" />
+                            android:text="@string/normal_weight" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -328,7 +327,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="20dp"
                             android:layout_weight="7"
-                            android:text="Nadwaga" />
+                            android:text="@string/overweight" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -359,7 +358,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="20dp"
                             android:layout_weight="7"
-                            android:text="Otyłość 1" />
+                            android:text="@string/obese1" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -390,14 +389,14 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="20dp"
                             android:layout_weight="7"
-                            android:text="Otyłość 2" />
+                            android:text="@string/obese2" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
                             android:gravity="right"
-                            android:text="40" />
+                            android:text="&gt;40" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -432,7 +431,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Waga Idealna" />
+                        android:text="@string/ideal_weight" />
 
                     <TextView
                         android:id="@+id/wagaIdealna"
@@ -440,7 +439,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="89 kg" />
+                        android:text="... kg" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -454,7 +453,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Waga Prawidłowa" />
+                        android:text="@string/correct_weight" />
 
                     <TextView
                         android:id="@+id/przedzialWagi"
@@ -462,7 +461,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="74.6 - 97.5 kg" />
+                        android:text="... - ... kg" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -472,11 +471,11 @@
                     android:paddingBottom="15dp">
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/underOverWeightTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Nadwaga/Niedowaga" />
+                        android:text="@string/under_over_weight" />
 
                     <TextView
                         android:id="@+id/nadwaga"
@@ -484,7 +483,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right"
-                        android:text="26 kg" />
+                        android:text="... kg" />
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>

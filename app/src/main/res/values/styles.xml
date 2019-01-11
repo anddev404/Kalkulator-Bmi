@@ -14,7 +14,12 @@
 
 
     <style name="EditText">
-        <item name="android:width">20dp</item>
+        <!--<item name="android:width">20dp</item>-->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textCursorDrawable">@drawable/kursor_edittext</item>
+        <item name="backgroundTint">@android:color/holo_green_dark</item>
+
+
     </style>
 
     <style name="PoleWskaznika">
