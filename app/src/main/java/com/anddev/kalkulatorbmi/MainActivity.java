@@ -149,8 +149,8 @@ public class MainActivity extends AppCompatActivity {
             zmienSeekBarWgBmi(bmi);
             wyswietlaWageIdealna(kalkulator.obliczWageIdealna(), jednostkaWagi);
             wyswietlaPrzedzialWagi(kalkulator.obliczWageMinimalna(), kalkulator.obliczWageMaksymalna(), jednostkaWagi);
-            float nadwaga = pobraneDane.getWaga() - kalkulator.obliczWageMaksymalna();
-            wyswietlaNadwage(nadwaga, jednostkaWagi);
+            float nadwagaLubNiedowaga = pobraneDane.getWaga() - kalkulator.obliczWageIdealna();
+            wyswietlNadwageLubNiedowage(nadwagaLubNiedowaga, jednostkaWagi);
 
             bmi = FloatUtils.zaokraglijFloata(bmi, 2);
             wyswietlBmiWWidoku(bmi);
@@ -309,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
         przedzialWagi.setText("" + FloatUtils.zaokraglijFloata(wagaMinimalna, 1) + " " + jednostkaWagi + " - " + FloatUtils.zaokraglijFloata(wagaMaksymalna, 1) + " " + jednostkaWagi);
     }
 
-    public void wyswietlaNadwage(float nadwagaFloat, String jednostkaWagi) {
+    public void wyswietlNadwageLubNiedowage(float nadwagaFloat, String jednostkaWagi) {
         Float niedowagaNadwaga = FloatUtils.zaokraglijFloata(nadwagaFloat, 1);
 
         if (niedowagaNadwaga < 0) {
