@@ -1,5 +1,6 @@
 package com.anddev.kalkulatorbmi;
 
+import android.content.ContextWrapper;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.anddev.kalkulatorbmi.model.PobraneDane;
 import com.anddev.kalkulatorbmi.tools.FloatUtils;
+import com.pixplicity.easyprefs.library.Prefs;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -81,12 +83,13 @@ public class MainActivity extends AppCompatActivity {
     void onCreate() {
         ButterKnife.bind(this);
 
+        inicjalizujSharePreference();
+        wzrostEditText.setText(odczytajWzrost());
+        jednostkaWagi = "kg";
         getSupportActionBar().hide();
         wiekEditText.addTextChangedListener(textWatcher);
         wzrostEditText.addTextChangedListener(textWatcher);
         wagaEditText.addTextChangedListener(textWatcher);
-
-        jednostkaWagi = "kg";
         seekBarBmi.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -94,6 +97,37 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        zapiszWzrost();
+    }
+
+    private void inicjalizujSharePreference() {
+
+        new Prefs.Builder()
+                .setContext(this)
+                .setMode(ContextWrapper.MODE_PRIVATE)
+                .setPrefsName(getPackageName())
+                .setUseDefaultSharedPreference(true)
+                .build();
+    }
+
+
+    private void zapiszWzrost() {
+
+        Prefs.putString("wzrost", wzrostEditText.getText().toString());
+    }
+
+    private String odczytajWzrost() {
+
+        String wzrost = Prefs.getString("wzrost", "");
+
+        return wzrost;
     }
 
 
