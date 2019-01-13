@@ -75,15 +75,18 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.linearLayoutOtylosc2)
     LinearLayout linearLayoutOtylosc2;
 
+    String jednostkaWagi;
+
     @AfterViews
     void onCreate() {
         ButterKnife.bind(this);
 
+        getSupportActionBar().hide();
         wiekEditText.addTextChangedListener(textWatcher);
         wzrostEditText.addTextChangedListener(textWatcher);
         wagaEditText.addTextChangedListener(textWatcher);
-        getSupportActionBar().hide();
 
+        jednostkaWagi = "kg";
         seekBarBmi.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -110,10 +113,10 @@ public class MainActivity extends AppCompatActivity {
             zmienKolorWybranegoLinearLayout(bmi);
             zmienKolorTekstuBmi(bmi);
             zmienSeekBarWgBmi(bmi);
-            wyswietlaWageIdealna(kalkulator.obliczWageIdealna());
-            wyswietlaPrzedzialWagi(kalkulator.obliczWageMinimalna(), kalkulator.obliczWageMaksymalna());
+            wyswietlaWageIdealna(kalkulator.obliczWageIdealna(), jednostkaWagi);
+            wyswietlaPrzedzialWagi(kalkulator.obliczWageMinimalna(), kalkulator.obliczWageMaksymalna(), jednostkaWagi);
             float nadwaga = pobraneDane.getWaga() - kalkulator.obliczWageMaksymalna();
-            wyswietlaNadwage(nadwaga);
+            wyswietlaNadwage(nadwaga, jednostkaWagi);
 
             bmi = FloatUtils.zaokraglijFloata(bmi, 2);
             wyswietlBmiWWidoku(bmi);
@@ -262,25 +265,25 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void wyswietlaWageIdealna(float wagaIdealnaFloat) {
+    public void wyswietlaWageIdealna(float wagaIdealnaFloat, String jednostkaWagi) {
 
-        wagaIdealna.setText("" + FloatUtils.zaokraglijFloata(wagaIdealnaFloat, 1));
+        wagaIdealna.setText("" + FloatUtils.zaokraglijFloata(wagaIdealnaFloat, 1) + " " + jednostkaWagi);
     }
 
-    public void wyswietlaPrzedzialWagi(float wagaMinimalna, float wagaMaksymalna) {
+    public void wyswietlaPrzedzialWagi(float wagaMinimalna, float wagaMaksymalna, String jednostkaWagi) {
 
-        przedzialWagi.setText("" + FloatUtils.zaokraglijFloata(wagaMinimalna, 1) + " - " + FloatUtils.zaokraglijFloata(wagaMaksymalna, 1));
+        przedzialWagi.setText("" + FloatUtils.zaokraglijFloata(wagaMinimalna, 1) + " " + jednostkaWagi + " - " + FloatUtils.zaokraglijFloata(wagaMaksymalna, 1) + " " + jednostkaWagi);
     }
 
-    public void wyswietlaNadwage(float nadwagaFloat) {
+    public void wyswietlaNadwage(float nadwagaFloat, String jednostkaWagi) {
         Float niedowagaNadwaga = FloatUtils.zaokraglijFloata(nadwagaFloat, 1);
 
         if (niedowagaNadwaga < 0) {
             nadwagaTextView.setText(getResources().getString(R.string.underweight));
-            nadwaga.setText("" + (-niedowagaNadwaga));
+            nadwaga.setText("" + (-niedowagaNadwaga) + " " + jednostkaWagi);
         } else {
             nadwagaTextView.setText(getResources().getString(R.string.overweight));
-            nadwaga.setText("" + niedowagaNadwaga);
+            nadwaga.setText("" + niedowagaNadwaga + " " + jednostkaWagi);
         }
     }
 
