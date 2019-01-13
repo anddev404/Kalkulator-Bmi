@@ -27,4 +27,20 @@
         <item name="android:layout_marginRight">10dp</item>
     </style>
 
+    <style name="CardViewStyl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="app:cardCornerRadius">10dp</item>-->
+        <item name="android:layout_marginTop">@dimen/marginesCardView</item>
+
+    </style>
+
+    <style name="Wynik">
+        <item name="android:paddingBottom">@dimen/paddingWynik</item>
+        <item name="android:paddingTop">@dimen/paddingWynik</item>
+        <item name="android:paddingLeft">@dimen/marginesPolaWskaznika</item>
+        <item name="android:paddingRight">@dimen/marginesPolaWskaznika</item>
+
+    </style>
+
 </resources>

@@ -9,9 +9,7 @@ import lombok.Setter;
 
 public class PobraneDane {
 
-    @Getter
-    @Setter
-    private int wiek;
+
 
     @Getter
     @Setter
@@ -21,8 +19,7 @@ public class PobraneDane {
     @Setter
     private float waga;
 
-    public PobraneDane(int wiek, float wzrost, float waga) {
-        this.wiek = wiek;
+    public PobraneDane(float wzrost, float waga) {
         this.wzrost = wzrost;
         this.waga = waga;
     }

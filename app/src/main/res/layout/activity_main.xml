@@ -7,54 +7,47 @@
     android:layout_height="match_parent"
     android:background="@color/tlo"
     android:fillViewport="true"
-    android:paddingBottom="10dp"
-    android:paddingTop="10dp"
     tools:context="com.anddev.kalkulatorbmi.MainActivity">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:weightSum="10"
-        tools:layout_editor_absoluteY="81dp">
+        android:padding="@dimen/paddingConstrainLayout"
+        android:weightSum="6">
 
 
         <android.support.v7.widget.CardView
             android:id="@+id/wprowadzanieDanychCardView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="10dp">
+            style="@style/CardViewStyl"
+            android:layout_margin="0dp"
+            android:layout_weight="2"
+            app:cardCornerRadius="@dimen/radiusCardView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp"
-                android:weightSum="19">
+                android:padding="@dimen/paddingWprowadzanieDanych"
+                android:weightSum="20">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7"
+                    android:layout_weight="10"
                     android:orientation="vertical"
-                    android:paddingRight="10dp">
+                    android:paddingRight="@dimen/_10sdp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_gravity="right"
+                        android:layout_gravity="end"
                         android:layout_weight="4"
                         android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:gravity="center_vertical"
-                            android:text="@string/age"
-                            android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/textView2"
@@ -63,7 +56,7 @@
                             android:layout_weight="4"
                             android:gravity="center_vertical"
                             android:text="@string/height"
-                            android:textSize="18sp" />
+                            android:textSize="@dimen/tekstDuzy" />
 
                         <TextView
                             android:id="@+id/textView3"
@@ -72,7 +65,7 @@
                             android:layout_weight="4"
                             android:gravity="center_vertical"
                             android:text="@string/weight"
-                            android:textSize="18sp" />
+                            android:textSize="@dimen/tekstDuzy" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -84,22 +77,14 @@
                     android:orientation="vertical">
 
                     <android.support.v7.widget.AppCompatEditText
-                        android:id="@+id/wiekEditText"
-                        style="@style/EditText"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:ems="10"
-                        android:inputType="number"
-                        android:maxLength="3" />
-
-                    <android.support.v7.widget.AppCompatEditText
                         android:id="@+id/wzrostEditText"
                         style="@style/EditText"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:ems="10"
                         android:inputType="numberDecimal"
-                        android:maxLength="5" />
+                        android:maxLength="5"
+                        android:textSize="@dimen/tekstDuzy" />
 
                     <android.support.v7.widget.AppCompatEditText
                         android:id="@+id/wagaEditText"
@@ -108,32 +93,8 @@
                         android:layout_weight="2"
                         android:ems="10"
                         android:inputType="numberDecimal"
-                        android:maxLength="5" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="7"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/buttonKobieta"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@null"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/kobieta_aktywny" />
-
-                    <ImageButton
-                        android:id="@+id/buttonMezczyzna"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@null"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/mezczyzna" />
+                        android:maxLength="5"
+                        android:textSize="@dimen/tekstDuzy" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -144,15 +105,17 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/wynikCardView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="10dp"
+            style="@style/CardViewStyl"
+            android:layout_weight="4"
+            app:cardCornerRadius="@dimen/radiusCardView"
+            app:layout_constraintBottom_toTopOf="@id/wynik2CardView"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/wprowadzanieDanychCardView">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -168,23 +131,26 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="BMI  "
-                        android:textSize="30dp" />
+                        android:gravity="end"
+                        android:paddingRight="@dimen/paddingTekstuBmi"
+                        android:text="@string/bmi"
+                        android:textAlignment="viewEnd"
+                        android:textSize="@dimen/tekstBardzoDuzy" />
 
                     <TextView
                         android:id="@+id/bmiTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="left"
-                        android:text="..."
-                        android:textSize="30dp" />
+                        android:gravity="start"
+                        android:paddingLeft="@dimen/paddingTekstuBmi"
+                        android:text="@string/trzy_kropki"
+                        android:textSize="@dimen/tekstBardzoDuzy" />
                 </LinearLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/wysokoscRelativeLayout"
                     android:paddingLeft="@dimen/marginesPolaWskaznika"
                     android:paddingRight="@dimen/marginesPolaWskaznika">
 
@@ -240,163 +206,160 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
                     android:orientation="vertical">
 
 
                     <LinearLayout
                         android:id="@+id/linearLayoutNiedowaga"
+                        style="@style/Wynik"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="@dimen/marginesPolaWskaznika"
-                        android:paddingRight="@dimen/marginesPolaWskaznika"
-                        android:paddingTop="8dp"
                         android:weightSum="10">
 
                         <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="@dimen/wysokoscPolaWskaznika"
+                            android:layout_height="@dimen/wysokoscPolaWskaznika"
                             android:background="@drawable/kwadrat_niedowaga" />
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margines"
                             android:layout_weight="7"
-                            android:text="@string/underweight" />
+                            android:text="@string/underweight"
+                            android:textSize="@dimen/tekstNormalny" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="&lt;18.5" />
+                            android:gravity="end"
+                            android:text="@string/przedzial_18"
+                            android:textSize="@dimen/tekstNormalny" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/linearLayoutWagaPrawidlowa"
+                        style="@style/Wynik"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="@dimen/marginesPolaWskaznika"
-                        android:paddingRight="@dimen/marginesPolaWskaznika"
-                        android:paddingTop="8dp"
                         android:weightSum="10">
 
                         <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="@dimen/wysokoscPolaWskaznika"
+                            android:layout_height="@dimen/wysokoscPolaWskaznika"
                             android:background="@drawable/kwadrat_waga_prawidlowa" />
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margines"
                             android:layout_weight="7"
-                            android:text="@string/normal_weight" />
+                            android:gravity="start"
+                            android:text="@string/normal_weight"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/tekstNormalny" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="18.5 - 25" />
+                            android:gravity="end"
+                            android:text="@string/przedzial_18_25"
+                            android:textSize="@dimen/tekstNormalny" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/linearLayoutNadwaga"
+                        style="@style/Wynik"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="@dimen/marginesPolaWskaznika"
-                        android:paddingRight="@dimen/marginesPolaWskaznika"
-                        android:paddingTop="8dp"
                         android:weightSum="10">
 
                         <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="@dimen/wysokoscPolaWskaznika"
+                            android:layout_height="@dimen/wysokoscPolaWskaznika"
                             android:background="@drawable/kwadrat_nadwaga" />
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margines"
                             android:layout_weight="7"
-                            android:text="@string/overweight" />
+                            android:text="@string/overweight"
+                            android:textSize="@dimen/tekstNormalny" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="25 - 30" />
+                            android:gravity="end"
+                            android:text="@string/przedzial_25_30"
+                            android:textSize="@dimen/tekstNormalny"
+                            tools:ignore="HardcodedText" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/linearLayoutOtylosc1"
+                        style="@style/Wynik"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="@dimen/marginesPolaWskaznika"
-                        android:paddingRight="@dimen/marginesPolaWskaznika"
-                        android:paddingTop="8dp"
                         android:weightSum="10">
 
                         <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="@dimen/wysokoscPolaWskaznika"
+                            android:layout_height="@dimen/wysokoscPolaWskaznika"
                             android:background="@drawable/kwadrat_otylosc1" />
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margines"
                             android:layout_weight="7"
-                            android:text="@string/obese1" />
+                            android:text="@string/obese1"
+                            android:textSize="@dimen/tekstNormalny" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="30 - 40" />
+                            android:gravity="end"
+                            android:text="@string/przedzial_30_35"
+                            android:textSize="@dimen/tekstNormalny" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/linearLayoutOtylosc2"
+                        style="@style/Wynik"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
-                        android:paddingBottom="8dp"
-                        android:paddingLeft="@dimen/marginesPolaWskaznika"
-                        android:paddingRight="@dimen/marginesPolaWskaznika"
-                        android:paddingTop="8dp"
                         android:weightSum="10">
 
                         <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="@dimen/wysokoscPolaWskaznika"
+                            android:layout_height="@dimen/wysokoscPolaWskaznika"
                             android:background="@drawable/kwadrat_otylosc2" />
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margines"
                             android:layout_weight="7"
-                            android:text="@string/obese2" />
+                            android:text="@string/obese2"
+                            android:textSize="@dimen/tekstNormalny" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
-                            android:gravity="right"
-                            android:text="&gt;40" />
+                            android:gravity="end"
+                            android:text="@string/przedzial_35"
+                            android:textSize="@dimen/tekstNormalny" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -405,10 +368,11 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="10dp"
+            android:id="@+id/wynik2CardView"
+            style="@style/CardViewStyl"
+            app:cardCornerRadius="@dimen/radiusCardView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/wynikCardView">
 
 
@@ -423,70 +387,77 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:paddingBottom="15dp"
-                    android:paddingTop="10dp">
+                    android:paddingTop="@dimen/paddingTop"
+                    android:paddingBottom="@dimen/paddingBottom">
 
                     <TextView
                         android:id="@+id/textView9"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/ideal_weight" />
+                        android:text="@string/ideal_weight"
+                        android:textSize="@dimen/tekstNormalny" />
 
                     <TextView
                         android:id="@+id/wagaIdealna"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="... kg" />
+                        android:gravity="end"
+                        android:text="@string/kg"
+                        android:textAlignment="viewEnd"
+                        android:textSize="@dimen/tekstNormalny" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:paddingBottom="15dp">
+                    android:paddingBottom="@dimen/paddingBottom">
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/correct_weight" />
+                        android:text="@string/correct_weight"
+                        android:textSize="@dimen/tekstNormalny" />
 
                     <TextView
                         android:id="@+id/przedzialWagi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="... - ... kg" />
+                        android:gravity="end"
+                        android:text="@string/kg2"
+                        android:textSize="@dimen/tekstNormalny" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:paddingBottom="15dp">
+                    android:paddingBottom="@dimen/paddingBottom">
 
                     <TextView
                         android:id="@+id/underOverWeightTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/under_over_weight" />
+                        android:text="@string/under_over_weight"
+                        android:textSize="@dimen/tekstNormalny" />
 
                     <TextView
                         android:id="@+id/nadwaga"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="... kg" />
+                        android:gravity="end"
+                        android:text="@string/kg"
+                        android:textSize="@dimen/tekstNormalny" />
                 </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
-    </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>

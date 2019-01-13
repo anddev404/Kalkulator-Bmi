@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="wysokoscWskaznika">30dp</dimen>
-    <dimen name="szerokoscWskaznika">5dp</dimen>
+    <dimen name="wysokoscWskaznika">@dimen/_300sdp</dimen>
+    <dimen name="szerokoscWskaznika">@dimen/_5sdp</dimen>
 
-    <dimen name="wysokoscPolaWskaznika">20dp</dimen>
-    <dimen name="marginesPolaWskaznika">20dp</dimen>
+    <dimen name="wysokoscPolaWskaznika">@dimen/_20sdp</dimen>
+    <dimen name="marginesPolaWskaznika">@dimen/_20sdp</dimen>
+
+    <dimen name="wysokoscRelativeLayout">@dimen/_40sdp</dimen>
+
+    <dimen name="tekstBardzoDuzy">@dimen/_30ssp</dimen>
+    <dimen name="tekstDuzy">@dimen/_18ssp</dimen>
+    <dimen name="tekstNormalny">@dimen/_14ssp</dimen>
+
+    <dimen name="marginesCardView">@dimen/_10sdp</dimen>
+    <dimen name="radiusCardView">@dimen/_10sdp</dimen>
+    <dimen name="paddingConstrainLayout">@dimen/_10sdp</dimen>
+    <dimen name="paddingWprowadzanieDanych">@dimen/_10sdp</dimen>
+    <dimen name="paddingWynik">@dimen/_8sdp</dimen>
+
+    <dimen name="paddingBottom">@dimen/_15sdp</dimen>
+    <dimen name="paddingTop">@dimen/_10sdp</dimen>
+
+    <dimen name="margines">@dimen/_16sdp</dimen>
+    <dimen name="paddingTekstuBmi">@dimen/_6sdp</dimen>
+
 
 </resources>

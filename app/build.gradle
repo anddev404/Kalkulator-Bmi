@@ -28,7 +28,7 @@ dependencies {
 }
 dependencies {
     //ButerKnife
-    compile 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
 }
@@ -38,21 +38,29 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:1.16.18"
 }
 //AndroidAnnotation
-def AAVersion = '4.4.0'
+def AAVersion = '4.6.0'
 dependencies {
 
     annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
-    compile "org.androidannotations:androidannotations-api:$AAVersion"
+    implementation "org.androidannotations:androidannotations-api:$AAVersion"
 }
 
 dependencies {
 //cardview
+    //implementation 'com.android.support:cardview-v7:26.1.0'
     implementation 'com.android.support:cardview-v7:26.1.0'
 
+    
 }
 
 dependencies {
 //sharePreference
     implementation 'com.pixplicity.easyprefs:library:1.9.0'
 
+}
+
+dependencies {
+//sdp, ssp
+    implementation 'com.intuit.sdp:sdp-android:1.0.5'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
 }

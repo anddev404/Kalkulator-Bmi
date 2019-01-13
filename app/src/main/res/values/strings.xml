@@ -14,4 +14,17 @@
     <string name="ideal_weight">Ideal Weight</string>
     <string name="correct_weight">Correct Weight</string>
     <string name="under_over_weight">Underweight/Overweight</string>
+
+    <string name="bmi" translatable="false">BMI</string>
+    <string name="trzy_kropki" translatable="false">...</string>
+
+    <string name="przedzial_18" translatable="false"><![CDATA[<18.5]]></string>
+    <string name="przedzial_18_25" translatable="false">18.5 - 25</string>
+    <string name="przedzial_25_30" translatable="false">25 - 30</string>
+    <string name="przedzial_30_35" translatable="false">30 - 35</string>
+    <string name="przedzial_35" translatable="false"><![CDATA[>35]]></string>
+
+    <string name="kg" translatable="false">… kg</string>
+    <string name="kg2" translatable="false">… - … kg</string>
+
 </resources>

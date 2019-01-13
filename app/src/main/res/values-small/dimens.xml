@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="wysokoscWskaznika">@dimen/_200sdp</dimen>
+    <dimen name="szerokoscWskaznika">@dimen/_3sdp</dimen>
+
+    <dimen name="wysokoscPolaWskaznika">@dimen/_14sdp</dimen>
+    <dimen name="marginesPolaWskaznika">@dimen/_14sdp</dimen>
+
+    <dimen name="wysokoscRelativeLayout">@dimen/_27sdp</dimen>
+
+    <dimen name="tekstBardzoDuzy">@dimen/_20ssp</dimen>
+    <dimen name="tekstDuzy">@dimen/_12ssp</dimen>
+    <dimen name="tekstNormalny">@dimen/_10ssp</dimen>
+
+    <dimen name="marginesCardView">@dimen/_6sdp</dimen>
+    <dimen name="radiusCardView">@dimen/_6sdp</dimen>
+    <dimen name="paddingConstrainLayout">@dimen/_6sdp</dimen>
+    <dimen name="paddingWprowadzanieDanych">@dimen/_6sdp</dimen>
+    <dimen name="paddingWynik">@dimen/_5sdp</dimen>
+
+    <dimen name="paddingBottom">@dimen/_10sdp</dimen>
+    <dimen name="paddingTop">@dimen/_16sdp</dimen>
+
+    <dimen name="margines">@dimen/_11sdp</dimen>
+</resources>

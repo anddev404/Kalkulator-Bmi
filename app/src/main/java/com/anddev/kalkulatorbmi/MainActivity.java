@@ -28,8 +28,6 @@ import butterknife.OnClick;
 @EActivity(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.wiekEditText)
-    EditText wiekEditText;
 
     @BindView(R.id.wzrostEditText)
     EditText wzrostEditText;
@@ -39,12 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.bmiTextView)
     TextView bmiTextView;
-
-    @BindView(R.id.buttonKobieta)
-    ImageButton buttonKobieta;
-
-    @BindView(R.id.buttonMezczyzna)
-    ImageButton buttonMezczyzna;
 
 
     @BindView(R.id.wagaIdealna)
@@ -87,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
         wzrostEditText.setText(odczytajWzrost());
         jednostkaWagi = "kg";
         getSupportActionBar().hide();
-        wiekEditText.addTextChangedListener(textWatcher);
         wzrostEditText.addTextChangedListener(textWatcher);
         wagaEditText.addTextChangedListener(textWatcher);
         seekBarBmi.setOnTouchListener(new View.OnTouchListener() {
@@ -97,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        ustawKursorNakoncu(wzrostEditText);
     }
 
 
@@ -161,15 +153,14 @@ public class MainActivity extends AppCompatActivity {
 
         try {
 
-            Integer wiek = Integer.parseInt(wiekEditText.getText().toString());
             Float wzrost = Float.parseFloat(wzrostEditText.getText().toString());
             Float waga = Float.parseFloat(wagaEditText.getText().toString());
 
-            return new PobraneDane(wiek, wzrost, waga);
+            return new PobraneDane(wzrost, waga);
 
         } catch (Exception e) {
 
-            return new PobraneDane(0, 0, 0);
+            return new PobraneDane(0, 0);
 
         }
     }
@@ -178,26 +169,6 @@ public class MainActivity extends AppCompatActivity {
         bmiTextView.setText("" + bmi);
     }
 
-
-    @OnClick({R.id.buttonKobieta, R.id.buttonMezczyzna})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-
-            case R.id.buttonKobieta:
-
-                buttonKobieta.setImageResource(R.drawable.kobieta_aktywny);
-                buttonMezczyzna.setImageResource(R.drawable.mezczyzna);
-
-                break;
-
-            case R.id.buttonMezczyzna:
-
-                buttonKobieta.setImageResource(R.drawable.kobieta);
-                buttonMezczyzna.setImageResource(R.drawable.mezczyzna_aktywny);
-
-                break;
-        }
-    }
 
 
     public void usunKolorWszystkichLinearLayout() {
@@ -226,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
             usunKolorWszystkichLinearLayout();
             linearLayoutNadwaga.setBackgroundColor(getResources().getColor(R.color.kolorNadwagaSlaby));
 
-        } else if (bmi >= 30 && bmi < 40) {
+        } else if (bmi >= 30 && bmi < 35) {
             usunKolorWszystkichLinearLayout();
             linearLayoutOtylosc1.setBackgroundColor(getResources().getColor(R.color.kolorOtylosc1Slaby));
 
@@ -251,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (bmi >= 25 && bmi < 30) {
             bmiTextView.setTextColor(getResources().getColor(R.color.kolorNadwaga));
 
-        } else if (bmi >= 30 && bmi < 40) {
+        } else if (bmi >= 30 && bmi < 35) {
             bmiTextView.setTextColor(getResources().getColor(R.color.kolorOtylosc1));
 
         } else {
@@ -286,15 +257,15 @@ public class MainActivity extends AppCompatActivity {
             float postep = ((float) bmi - 25f) * wspolczynnik;
             seekBarBmi.setProgress((int) postep + 40);
 
-        } else if (bmi >= 30 && bmi < 40) {
+        } else if (bmi >= 30 && bmi < 35) {
 
-            float wspolczynnik = 20 / 10f;
+            float wspolczynnik = 20 / 5f;
             float postep = ((float) bmi - 30f) * wspolczynnik;
             seekBarBmi.setProgress((int) postep + 60);
         } else {
 
             float wspolczynnik = 20 / 20;
-            float postep = ((float) bmi - 40f) * wspolczynnik;
+            float postep = ((float) bmi - 35f) * wspolczynnik;
             seekBarBmi.setProgress((int) postep + 80);
         }
     }
@@ -319,6 +290,11 @@ public class MainActivity extends AppCompatActivity {
             nadwagaTextView.setText(getResources().getString(R.string.overweight));
             nadwaga.setText("" + niedowagaNadwaga + " " + jednostkaWagi);
         }
+    }
+
+    public void ustawKursorNakoncu(EditText edittext) {
+        edittext.setSelection(edittext.getText().length());
+
     }
 
 }
