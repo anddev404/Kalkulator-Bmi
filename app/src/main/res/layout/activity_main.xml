@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/tlo"
     android:fillViewport="true"
-    tools:context="com.anddev.kalkulatorbmi.MainActivity">
+    tools:context="com.anddev.kalkulatorbmi.pl.anddev.kalkulatorbmi.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

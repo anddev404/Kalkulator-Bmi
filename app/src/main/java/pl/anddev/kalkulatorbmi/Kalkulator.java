@@ -1,6 +1,6 @@
-package com.anddev.kalkulatorbmi;
+package pl.anddev.kalkulatorbmi;
 
-import com.anddev.kalkulatorbmi.model.PobraneDane;
+import pl.anddev.kalkulatorbmi.model.PobraneDane;
 
 import lombok.Getter;
 import lombok.Setter;

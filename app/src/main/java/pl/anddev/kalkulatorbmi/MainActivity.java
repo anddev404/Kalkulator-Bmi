@@ -1,4 +1,4 @@
-package com.anddev.kalkulatorbmi;
+package pl.anddev.kalkulatorbmi;
 
 import android.content.ContextWrapper;
 import android.support.v7.app.AppCompatActivity;
@@ -7,23 +7,19 @@ import android.text.TextWatcher;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.anddev.kalkulatorbmi.model.PobraneDane;
-import com.anddev.kalkulatorbmi.tools.FloatUtils;
+import pl.anddev.kalkulatorbmi.model.PobraneDane;
+import pl.anddev.kalkulatorbmi.tools.FloatUtils;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.SeekBarProgressChange;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {

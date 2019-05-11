@@ -1,4 +1,4 @@
-package com.anddev.kalkulatorbmi.tools;
+package pl.anddev.kalkulatorbmi.tools;
 
 import org.junit.Test;
 

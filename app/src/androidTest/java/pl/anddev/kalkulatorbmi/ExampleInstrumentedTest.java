@@ -1,4 +1,4 @@
-package com.anddev.kalkulatorbmi;
+package pl.anddev.kalkulatorbmi;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

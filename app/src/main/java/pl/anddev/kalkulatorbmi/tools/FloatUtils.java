@@ -1,4 +1,4 @@
-package com.anddev.kalkulatorbmi.tools;
+package pl.anddev.kalkulatorbmi.tools;
 
 /**
  * Created by Marcin on 2018-03-20.

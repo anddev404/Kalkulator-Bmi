@@ -1,4 +1,4 @@
-package com.anddev.kalkulatorbmi.model;
+package pl.anddev.kalkulatorbmi.model;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.anddev.kalkulatorbmi"
+    package="pl.anddev.kalkulatorbmi"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/icon_bmi_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity_"
+        <activity android:name="pl.anddev.kalkulatorbmi.MainActivity_"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
