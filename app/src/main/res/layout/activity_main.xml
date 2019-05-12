@@ -82,10 +82,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:ems="10"
+                        android:hint="@string/in_cm"
                         android:inputType="numberDecimal"
                         android:maxLength="5"
-                        android:textSize="@dimen/tekstDuzy"
-                        android:hint="@string/in_cm"/>
+                        android:textSize="@dimen/tekstDuzy" />
 
                     <android.support.v7.widget.AppCompatEditText
                         android:id="@+id/wagaEditText"
@@ -93,10 +93,10 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:ems="10"
+                        android:hint="@string/in_kg"
                         android:inputType="numberDecimal"
                         android:maxLength="5"
-                        android:textSize="@dimen/tekstDuzy"
-                        android:hint="@string/in_kg"/>
+                        android:textSize="@dimen/tekstDuzy" />
                 </LinearLayout>
 
             </LinearLayout>

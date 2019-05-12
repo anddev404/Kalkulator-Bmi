@@ -93,6 +93,7 @@
                                 android:layout_weight="2"
                                 android:ems="10"
                                 android:gravity="center_vertical"
+                                android:imeOptions="flagNoExtractUi"
                                 android:inputType="numberDecimal"
                                 android:maxLength="5"
                                 android:textSize="@dimen/tekstDuzy" />
@@ -104,6 +105,7 @@
                                 android:layout_weight="2"
                                 android:ems="10"
                                 android:gravity="center_vertical"
+                                android:imeOptions="flagNoExtractUi"
                                 android:inputType="numberDecimal"
                                 android:maxLength="5"
                                 android:textSize="@dimen/tekstDuzy" />
