@@ -347,7 +347,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="3"
                                     android:gravity="right"
-                                    android:text="&lt;18.5"
+                                    android:text="@string/range_18"
                                     android:textSize="@dimen/tekstNormalny" />
                             </LinearLayout>
 
@@ -377,7 +377,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="3"
                                     android:gravity="right"
-                                    android:text="18.5 - 25"
+                                    android:text="@string/range_18_25"
                                     android:textSize="@dimen/tekstNormalny" />
                             </LinearLayout>
 
@@ -407,7 +407,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="3"
                                     android:gravity="right"
-                                    android:text="25 - 30"
+                                    android:text="@string/range_25_30"
                                     android:textSize="@dimen/tekstNormalny" />
                             </LinearLayout>
 
@@ -437,7 +437,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="3"
                                     android:gravity="right"
-                                    android:text="30 - 35"
+                                    android:text="@string/range_30_35"
                                     android:textSize="@dimen/tekstNormalny" />
                             </LinearLayout>
 
@@ -467,7 +467,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="3"
                                     android:gravity="right"
-                                    android:text="&gt;35"
+                                    android:text="@string/range_35"
                                     android:textSize="@dimen/tekstNormalny" />
                             </LinearLayout>
 
