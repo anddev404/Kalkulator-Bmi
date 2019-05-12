@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/tlo"
     android:fillViewport="true"
-    tools:context="com.anddev.kalkulatorbmi.pl.anddev.kalkulatorbmi.MainActivity">
+    tools:context="pl.anddev.kalkulatorbmi.MainActivity">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
