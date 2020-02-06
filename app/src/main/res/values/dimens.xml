@@ -16,7 +16,7 @@
     <dimen name="marginesCardView">@dimen/_10sdp</dimen>
     <dimen name="radiusCardView">@dimen/_10sdp</dimen>
     <dimen name="paddingConstrainLayout">@dimen/_10sdp</dimen>
-    <dimen name="paddingWprowadzanieDanych">@dimen/_10sdp</dimen>
+    <dimen name="paddingWprowadzanieDanych">@dimen/_8sdp</dimen>
     <dimen name="paddingWynik">@dimen/_8sdp</dimen>
 
     <dimen name="paddingBottom">@dimen/_15sdp</dimen>

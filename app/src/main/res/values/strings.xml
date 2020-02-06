@@ -28,5 +28,8 @@
     <string name="kg2" translatable="false">… - … kg</string>
 
     <string name="in_kg" translatable="false">kg</string>
+    <string name="in_lbs" translatable="false">lb</string>
+    <string name="in_stone" translatable="false">st</string>
+
     <string name="in_cm" translatable="false">cm</string>
 </resources>

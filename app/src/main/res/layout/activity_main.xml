@@ -38,14 +38,13 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="10"
-                    android:orientation="vertical"
-                    android:paddingRight="@dimen/_10sdp">
+                    android:layout_weight="6.5"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_gravity="end"
+                        android:layout_gravity="center_horizontal"
                         android:layout_weight="4"
                         android:orientation="vertical">
 
@@ -73,32 +72,200 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
+                    android:layout_weight="13"
                     android:orientation="vertical">
 
-                    <android.support.v7.widget.AppCompatEditText
-                        android:id="@+id/wzrostEditText"
-                        style="@style/EditText"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:ems="10"
-                        android:hint="@string/in_cm"
-                        android:inputType="numberDecimal"
-                        android:maxLength="5"
-                        android:textSize="@dimen/tekstDuzy" />
+                        android:orientation="horizontal"
+                        android:weightSum="10">
 
-                    <android.support.v7.widget.AppCompatEditText
-                        android:id="@+id/wagaEditText"
-                        style="@style/EditText"
+                        <LinearLayout
+                            android:id="@+id/wzrost_cm_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:visibility="visible">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                            </View>
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wzrostEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:ems="10"
+                                android:hint="@string/in_cm"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5"
+                                android:textSize="@dimen/tekstDuzy" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                            </View>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/wzrost_ft_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:visibility="gone">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wzrostFtEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:hint="ft"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5"
+                                android:nextFocusRight="@id/wzrostInEditText"
+                                android:nextFocusDown="@id/wzrostInEditText"
+                                android:nextFocusForward="@id/wzrostInEditText"
+                                android:textSize="@dimen/tekstDuzy" />
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wzrostInEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:ems="10"
+                                android:hint="in"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5"
+                                android:textSize="@dimen/tekstDuzy" />
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinnerWzrost"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4.5" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:ems="10"
-                        android:hint="@string/in_kg"
-                        android:inputType="numberDecimal"
-                        android:maxLength="5"
-                        android:textSize="@dimen/tekstDuzy" />
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <LinearLayout
+                            android:id="@+id/waga_kg_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:visibility="visible">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wagaEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:ems="10"
+                                android:hint="@string/in_kg"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5"
+                                android:textSize="@dimen/tekstDuzy" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/waga_lbs_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wagaLbsEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:ems="10"
+                                android:hint="@string/in_lbs"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5"
+                                android:textSize="@dimen/tekstDuzy" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/waga_stone_and_lbs_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:visibility="gone">
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wagaStEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:ems="10"
+                                android:hint="@string/in_stone"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5"
+                                android:textSize="@dimen/tekstDuzy" />
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/wagaLbWithStoneEditText"
+                                style="@style/EditText"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:ems="10"
+                                android:hint="@string/in_lbs"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5"
+                                android:nextFocusRight="@id/wagaStEditText"
+                                android:nextFocusDown="@id/wagaStEditText"
+                                android:nextFocusForward="@id/wagaStEditText"
+
+
+                                android:textSize="@dimen/tekstDuzy" />
+
+                        </LinearLayout>
+
+
+                        <Spinner
+                            android:id="@+id/spinnerWaga"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4.5" />
+
+                    </LinearLayout>
                 </LinearLayout>
-
             </LinearLayout>
 
 
