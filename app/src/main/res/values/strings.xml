@@ -14,6 +14,7 @@
     <string name="ideal_weight">Ideal Weight</string>
     <string name="correct_weight">Correct Weight</string>
     <string name="under_over_weight">Underweight/Overweight</string>
+    <string name="under_over_weight_ideal_weight">Your weight is correct</string>
 
     <string name="bmi" translatable="false">BMI</string>
     <string name="trzy_kropki" translatable="false">...</string>

@@ -371,8 +371,20 @@ public class MainActivity extends AppCompatActivity {
         zmienSeekBarWgBmi(bmi);
         wyswietlaWageIdealna(kalkulator.obliczWageIdealna(), jednostkaWagi);
         wyswietlaPrzedzialWagi(kalkulator.obliczWageMinimalna(), kalkulator.obliczWageMaksymalna(), jednostkaWagi);
-        float nadwagaLubNiedowaga = pobraneDane.getWaga() - kalkulator.obliczWageIdealna();
-        wyswietlNadwageLubNiedowage(nadwagaLubNiedowaga, jednostkaWagi);
+
+        if (pobraneDane.getWaga() > kalkulator.obliczWageMaksymalna()) {
+            float nadwagaLubNiedowaga = pobraneDane.getWaga() - kalkulator.obliczWageMaksymalna();
+            wyswietlNadwageLubNiedowage(nadwagaLubNiedowaga, jednostkaWagi);
+
+        } else if (pobraneDane.getWaga() < kalkulator.obliczWageMinimalna()) {
+
+            float nadwagaLubNiedowaga = pobraneDane.getWaga() - kalkulator.obliczWageMinimalna();
+            wyswietlNadwageLubNiedowage(nadwagaLubNiedowaga, jednostkaWagi);
+
+        } else {
+            wyswietlNadwageLubNiedowage(0f, jednostkaWagi);
+
+        }
 
         bmi = FloatUtils.zaokraglijFloata(bmi, 2);
         wyswietlBmiWWidoku(bmi);
@@ -610,6 +622,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void wyswietlNadwageLubNiedowage(float nadwagaFloat, String jednostkaWagi) {
+        if (nadwagaFloat == 0) {
+            nadwaga.setText("");
+            nadwagaTextView.setText(getResources().getString(R.string.under_over_weight_ideal_weight));
+            return;
+        }
         try {
 
 
