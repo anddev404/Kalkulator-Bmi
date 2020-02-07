@@ -18,6 +18,7 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:textCursorDrawable">@drawable/kursor_edittext</item>
         <item name="backgroundTint">@android:color/holo_green_dark</item>
+        <item name="android:textColorHighlight">@color/kolorZaznaczonegoTekstu</item>
 
 
     </style>

@@ -22,5 +22,5 @@
 
     <color name="kolorTekstu">#000000</color>
 
-
+    <color name="kolorZaznaczonegoTekstu">#95C9FD</color>
 </resources>

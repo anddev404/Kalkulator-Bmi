@@ -116,6 +116,7 @@
                                         android:imeOptions="flagNoExtractUi"
                                         android:inputType="numberDecimal"
                                         android:maxLength="5"
+                                        android:selectAllOnFocus="true"
                                         android:textSize="@dimen/tekstDuzy" />
 
                                     <View
@@ -146,6 +147,7 @@
                                         android:nextFocusRight="@id/wzrostInEditText"
                                         android:nextFocusDown="@id/wzrostInEditText"
                                         android:nextFocusForward="@id/wzrostInEditText"
+                                        android:selectAllOnFocus="true"
                                         android:textSize="@dimen/tekstDuzy" />
 
                                     <android.support.v7.widget.AppCompatEditText
@@ -158,6 +160,7 @@
                                         android:imeOptions="flagNoExtractUi"
                                         android:inputType="numberDecimal"
                                         android:maxLength="5"
+                                        android:selectAllOnFocus="true"
                                         android:textSize="@dimen/tekstDuzy" />
                                 </LinearLayout>
 
@@ -198,6 +201,7 @@
                                         android:imeOptions="flagNoExtractUi"
                                         android:inputType="numberDecimal"
                                         android:maxLength="5"
+                                        android:selectAllOnFocus="true"
                                         android:textSize="@dimen/tekstDuzy" />
 
                                     <View
@@ -228,6 +232,7 @@
                                         android:imeOptions="flagNoExtractUi"
                                         android:inputType="numberDecimal"
                                         android:maxLength="5"
+                                        android:selectAllOnFocus="true"
                                         android:textSize="@dimen/tekstDuzy" />
 
                                     <View
@@ -253,6 +258,7 @@
                                         android:imeOptions="flagNoExtractUi"
                                         android:inputType="numberDecimal"
                                         android:maxLength="5"
+                                        android:selectAllOnFocus="true"
                                         android:textSize="@dimen/tekstDuzy" />
 
                                     <android.support.v7.widget.AppCompatEditText
@@ -265,6 +271,7 @@
                                         android:imeOptions="flagNoExtractUi"
                                         android:inputType="numberDecimal"
                                         android:maxLength="5"
+                                        android:selectAllOnFocus="true"
                                         android:textSize="@dimen/tekstDuzy" />
 
                                 </LinearLayout>

@@ -181,9 +181,6 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         inicjalizujSharePreference();
-        odczytajWzrost();
-        wybranaJednostkaWzrostu = odczytajJednostkeWzrostu();
-        wybranaJednostkaWagi = odczytajJednostkeWagi();
         getSupportActionBar().hide();
         wzrostEditText.addTextChangedListener(textWatcher);
         wagaEditText.addTextChangedListener(textWatcher);
@@ -225,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 obliczWszystko();
-
+                wzrostFtEditText.setSelection(wzrostFtEditText.getText().toString().length());
             }
 
 
@@ -271,6 +268,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        odczytajWzrost();
+        wybranaJednostkaWzrostu = odczytajJednostkeWzrostu();
+        wybranaJednostkaWagi = odczytajJednostkeWagi();
+        obliczWszystko();
+    }
 
     @Override
     protected void onStop() {
@@ -353,13 +358,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void afterTextChanged(Editable s) {
-
             obliczWszystko();
         }
     };
 
     public void obliczWszystko() {
-
         PobraneDane pobraneDane = pobierzDaneZWidokuDoModelu();
         Kalkulator kalkulator = new Kalkulator(pobraneDane);
         float bmi = kalkulator.obliczBmi();
@@ -373,6 +376,13 @@ public class MainActivity extends AppCompatActivity {
 
         bmi = FloatUtils.zaokraglijFloata(bmi, 2);
         wyswietlBmiWWidoku(bmi);
+        try {
+            wzrostEditText.setSelection(wzrostEditText.getText().toString().length());
+            wzrostFtEditText.setSelection(wzrostFtEditText.getText().toString().length());
+
+        } catch (Exception e) {
+
+        }
     }
 
     public Float zamienFuntyICaleNaCm(String ft, String in) {
@@ -437,10 +447,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public PobraneDane pobierzDaneZWidokuDoModelu() {
+        Float wzrost = 0.0f;
+        Float waga = 0.0f;
 
         try {
-            Float wzrost = 0.0f;
-            Float waga = 0.0f;
+
 
             if (wybranaJednostkaWzrostu == 0) {
                 wzrost = Float.parseFloat(wzrostEditText.getText().toString());
@@ -448,7 +459,10 @@ public class MainActivity extends AppCompatActivity {
                 wzrost = zamienFuntyICaleNaCm(wzrostFtEditText.getText().toString(), wzrostInEditText.getText().toString());
 
             }
+        } catch (Exception e) {
 
+        }
+        try {
             if (wybranaJednostkaWagi == 0) {
                 waga = Float.parseFloat(wagaEditText.getText().toString());
             } else if (wybranaJednostkaWagi == 1) {
@@ -459,13 +473,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-            return new PobraneDane(wzrost, waga);
-
         } catch (Exception e) {
-
-            return new PobraneDane(0, 0);
-
         }
+        return new PobraneDane(wzrost, waga);
     }
 
     public void wyswietlBmiWWidoku(Float bmi) {
@@ -535,7 +545,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void zmienSeekBarWgBmi(float bmi) {
-
 
         if (bmi <= 0) {
 
@@ -616,10 +625,12 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (waga <= 0) {
+
                 nadwaga.setText("... " + jednostkaWagi);
                 return;
             }
         } catch (Exception e) {
+            nadwaga.setText("... " + jednostkaWagi);
             return;
         }
 
