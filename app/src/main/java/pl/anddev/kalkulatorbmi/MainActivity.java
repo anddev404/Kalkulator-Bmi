@@ -623,7 +623,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void wyswietlNadwageLubNiedowage(Float nadwagaFloat, String jednostkaWagi) {
         try {
-            
+
             if (nadwagaFloat == 0 && wzrostEditText.getText().length() > 0 && wybranaJednostkaWzrostu == 0) {
                 nadwaga.setText("");
                 nadwagaTextView.setText(getResources().getString(R.string.under_over_weight_ideal_weight));
