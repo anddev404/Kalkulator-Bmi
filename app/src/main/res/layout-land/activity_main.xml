@@ -499,7 +499,7 @@
                                 android:id="@+id/linearLayoutNiedowaga"
                                 style="@style/Wynik"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:weightSum="10">
 
@@ -529,7 +529,7 @@
                                 android:id="@+id/linearLayoutWagaPrawidlowa"
                                 style="@style/Wynik"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:weightSum="10">
 
@@ -559,7 +559,7 @@
                                 android:id="@+id/linearLayoutNadwaga"
                                 style="@style/Wynik"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:weightSum="10">
 
@@ -589,7 +589,7 @@
                                 android:id="@+id/linearLayoutOtylosc1"
                                 style="@style/Wynik"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:weightSum="10">
 
@@ -619,7 +619,7 @@
                                 android:id="@+id/linearLayoutOtylosc2"
                                 style="@style/Wynik"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:orientation="horizontal"
                                 android:weightSum="10">
 
