@@ -621,11 +621,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void wyswietlNadwageLubNiedowage(float nadwagaFloat, String jednostkaWagi) {
-        if (nadwagaFloat == 0) {
-            nadwaga.setText("");
-            nadwagaTextView.setText(getResources().getString(R.string.under_over_weight_ideal_weight));
-            return;
+    public void wyswietlNadwageLubNiedowage(Float nadwagaFloat, String jednostkaWagi) {
+        try {
+            
+            if (nadwagaFloat == 0 && wzrostEditText.getText().length() > 0 && wybranaJednostkaWzrostu == 0) {
+                nadwaga.setText("");
+                nadwagaTextView.setText(getResources().getString(R.string.under_over_weight_ideal_weight));
+
+                return;
+            }
+            if (nadwagaFloat == 0 && wzrostFtEditText.getText().length() > 0 && wybranaJednostkaWzrostu == 1) {
+                nadwaga.setText("");
+                nadwagaTextView.setText(getResources().getString(R.string.under_over_weight_ideal_weight));
+
+                return;
+            }
+        } catch (Exception e) {
+
         }
         try {
 
@@ -647,6 +659,7 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
         } catch (Exception e) {
+            nadwagaTextView.setText(getResources().getString(R.string.under_over_weight));
             nadwaga.setText("... " + jednostkaWagi);
             return;
         }
